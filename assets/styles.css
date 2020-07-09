@@ -1,6 +1,7 @@
 body {
     background-color: #000;
-    font-family: 'Briller Regular', sans-serif;
+    font-family: 'briller', sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     color: #fff;
@@ -9,10 +10,15 @@ body {
 
 h1 {
     font-size: 69px;
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
 }
 
 h2 {
-    font-family: 'Briller Ultra', sans-serif;
+    font-family: 'briller', sans-serif;
+    font-style: normal;
+    font-weight: 900;
     font-size: 56px;
     letter-spacing: 3.36px;
     color: #FFFFFF;
@@ -23,7 +29,9 @@ h3 {
 }
 
 p {
-    font-family: OCRAStd;
+    font-family: ocr-a-std, monospace;
+    font-style: normal;
+    font-weight: 400;
     font-size: 27px;
     line-height: 36px;
     color: #FFFFFF;
@@ -31,8 +39,14 @@ p {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
+ul {
+    list-style-type: none;
+    padding-left: none;
+}
+
 
 #container {
     margin: 120px auto;
@@ -46,19 +60,38 @@ a {
     background-size: contain;
     background-color: #000;
     background-image: url(logo.svg);
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
+    top: 15%;
+    margin-left: -271px;
+    position: absolute;
+    z-index: 20;
+}
+
+#product {
+    position: relative;
+    height: 940px;
+    margin: 250px auto;
+}
+
+#product div {
+    position: absolute;
 }
 
 #sticker {
-    right: 5px;
     background-image: url(sticker.svg);
     background-repeat: no-repeat;
     height: 410px;
-    background-position: right;
-    margin-right: 35px;
-    position: relative;
-    z-index: 10;
+    width: 410px;
+    top: -15px;
+    right: 15px;
+}
+
+#sticker-gradient {
+    background: radial-gradient(#10FE01, #000 165px);
+    height: 420px;
+    width: 420px;
+    top: -25px;
+    right: 20px;
 }
 
 #concrete {
@@ -68,10 +101,9 @@ a {
     background-image: url(/assets/Concrete_relic@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -200px;
-    z-index: 1;
+    left: 50%;
+    margin-left: -405px;
+    margin-top: 150px;
 }
 
 #ar-button {
@@ -83,6 +115,9 @@ a {
     -moz-border-radius: 42px;
     -webkit-border-radius: 42px;
     margin: 70px auto;
+    font-family: ocr-a-std, monospace;
+    font-style: normal;
+    font-weight: 400;
 }
 
 #donate-button {
@@ -96,6 +131,10 @@ a {
     margin: 70px auto;
 }
 
+#donate-button:hover {
+    background: #04FE01;
+}
+
 #button-contents {
     line-height: 90px;
     text-align: center;
@@ -105,7 +144,9 @@ a {
 #donate-button-contents {
     line-height: 90px;
     text-align: center;
-    font-family: 'OCRAStd', sans-serif;
+    font-family: ocr-a-std, monospace;
+    font-style: normal;
+    font-weight: 400;
     font-size: 27px;
     color: #FFFFFF;
 }
@@ -157,23 +198,76 @@ a {
     display: block;
     /* this will let us add our animation  */
     position: relative;
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
 }
 
-#footer-caption {
-  font-family : 'Briller Ultra', sans-serif;
-  font-size : 106px;
-  line-height : 113.2px;
-  letter-spacing : 6.36px;
-  text-transform : uppercase;
-  color : #FFFFFF;
+#power-caption {
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 106px;
+    line-height: 113.2px;
+    letter-spacing: 6.36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
-#power {
-  height: 640px;
-  margin-top: 48px;
-  background-image: url(/assets/power.svg);
-      background-size: contain;
+#power-icon {
+    height: 640px;
+    margin-top: 48px;
+    background-image: url(/assets/power.svg);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #000;
+}
+
+#footer {
+    height: 250px;
+    padding-top: 158px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#contact {
+    float: left;
+    display: block;
+    width: 200px;
+    max-height: 180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#smiley {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-image: url(/assets/smiley.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+}
+
+#socials {
+    text-align: left;
+    max-width: 160px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: -5px;
+}
+
+#player {
+    float: left;
+    padding-left: 40px;
+    display: inline-block;
+    width: -moz-calc(100% - 240px);
+    width: -webkit-calc(100% - 240px);
+    width: calc(100% - 240px);
+    height: 100%;
 }
