@@ -1,0 +1,179 @@
+body {
+    background-color: #000;
+    font-family: 'Briller Regular', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 69px;
+}
+
+h2 {
+    font-family: 'Briller Ultra', sans-serif;
+    font-size: 56px;
+    letter-spacing: 3.36px;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-family: OCRAStd;
+    font-size: 27px;
+    line-height: 36px;
+    color: #FFFFFF;
+    ;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+    margin: 120px auto;
+    width: 1100px;
+    background-color: #000;
+}
+
+#header {
+    height: 138px;
+    width: 542px;
+    background-size: contain;
+    background-color: #000;
+    background-image: url(logo.svg);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sticker {
+    right: 5px;
+    background-image: url(sticker.svg);
+    background-repeat: no-repeat;
+    height: 410px;
+    background-position: right;
+    margin-right: 35px;
+    position: relative;
+    z-index: 10;
+}
+
+#concrete {
+    height: 775px;
+    width: 810px;
+    background-color: #000;
+    background-image: url(/assets/Concrete_relic@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    z-index: 1;
+}
+
+#ar-button {
+    width: 830px;
+    height: 90px;
+    background: #FFFFFF;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 42px;
+    -moz-border-radius: 42px;
+    -webkit-border-radius: 42px;
+    margin: 70px auto;
+}
+
+#donate-button {
+    width: 830px;
+    height: 90px;
+    background: #000;
+    border: 5px solid white;
+    border-radius: 42px;
+    -moz-border-radius: 42px;
+    -webkit-border-radius: 42px;
+    margin: 70px auto;
+}
+
+#button-contents {
+    line-height: 90px;
+    text-align: center;
+    color: #000;
+}
+
+#donate-button-contents {
+    line-height: 90px;
+    text-align: center;
+    font-family: 'OCRAStd', sans-serif;
+    font-size: 27px;
+    color: #FFFFFF;
+}
+
+#ar {
+    height: 34px;
+    position: relative;
+    margin-right: 10px;
+    top: 10px;
+
+}
+
+.section-contents {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.arrows {
+    left: 0;
+    color: #95F33A;
+    width: 100%;
+    /* each letter will be 5% of the viewport width (vw) */
+    font-size: 5vw;
+    line-height: 1;
+    /* this will stop the long text from causing scroll bars by hanging
+  outside of the arrows box area */
+    overflow: hidden;
+    /* our mix blend mode allows us to mix the current layer's style/colors with that
+   of what's behind it to create some really cool effects */
+    mix-blend-mode: difference;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-610px);
+    }
+
+    100% {
+        transform: translateX(-3000vw);
+    }
+}
+
+.arrows span {
+    /* this is the shorthand (brief) version of the animation css rule */
+    animation: moveLeft 400s infinite;
+    /* this will ensure the text stays all on the same line */
+    white-space: nowrap;
+    /* our span is inline by default, so here we tell it to be block */
+    display: block;
+    /* this will let us add our animation  */
+    position: relative;
+}
+
+#footer-caption {
+  font-family : 'Briller Ultra', sans-serif;
+  font-size : 106px;
+  line-height : 113.2px;
+  letter-spacing : 6.36px;
+  text-transform : uppercase;
+  color : #FFFFFF;
+}
+
+#power {
+  height: 640px;
+  margin-top: 48px;
+  background-image: url(/assets/power.svg);
+      background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+}
