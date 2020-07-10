@@ -1,8 +1,17 @@
-function makeArrows() {
-  const title = '››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››'
-  const arrowsText = new Array(50).fill(title).join('››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››››')
-  const arrows = document.querySelector('.arrows span')
-  arrows.innerHTML = arrowsText
+function pourConcrete() {
+	const a = '›'
+	const capText = a.repeat(420)
+	const cap = document.querySelector('.cap span')
+	cap.innerHTML = capText
 }
 
-makeArrows()
+pourConcrete ()
+
+function makeJumper() {
+	const gen = '›'
+	const swishText = gen.repeat(420)
+	const swish = document.querySelector('.swish span')
+	swish.innerHTML = swishText
+}
+
+makeJumper ()

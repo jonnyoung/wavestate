@@ -61,23 +61,43 @@ ul {
     background-color: #000;
 }
 
+@media screen and (max-width: 414px) {
+    #container {
+        margin: 45px auto;
+    }
+}
+
 #header {
+    width: 100%;
     height: 138px;
-    width: 542px;
+}
+
+@media screen and (max-width: 414px) {
+    #header {
+        height: 50px;
+    }
+}
+
+#ws-logo {
+    height: 138px;
     background-size: contain;
-    background-color: #000;
     background-image: url(logo.svg);
-    left: 50%;
-    top: 15%;
-    margin-left: -271px;
-    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
     z-index: 20;
+}
+
+@media screen and (max-width: 414px) {
+    #header {
+        height: 50px;
+    }
 }
 
 #product {
     position: relative;
     height: 940px;
-    margin: 250px auto 0 auto;
+    margin: 0px auto 100px auto;
 }
 
 #product div {
@@ -95,28 +115,58 @@ ul {
     background-repeat: no-repeat;
     height: 410px;
     width: 410px;
-    top: -15px;
-    right: 10%;
+    right: -90px;
+}
+
+@media screen and (max-width: 414px) {
+    #sticker {
+        height: 150px;
+        width: 150px;
+    }
 }
 
 #sticker-gradient {
     background: radial-gradient(#10FE01, #000 165px);
     height: 420px;
     width: 420px;
-    top: -25px;
-    right: 10%;
+    right: -90px;
+}
+
+@media screen and (max-width: 414px) {
+    #sticker-gradient {
+        background: radial-gradient(#10FE01, #000 70px);
+        height: 155px;
+        width: 155px;
+    }
 }
 
 #concrete {
     height: 775px;
     width: 810px;
-    background-color: #000;
     background-image: url(/assets/Concrete_relic@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
     left: 50%;
-    margin-left: -405px;
-    margin-top: 150px;
+    margin-left: -370px;
+    margin-top: 220px;
+}
+
+@media screen and (max-width: 414px) {
+    #concrete {
+        height: 300px;
+        width: 280px;
+        margin-left: -140px;
+        margin-top: 0px;
+    }
+}
+
+#prod-description {
+    font-size: 32px;
+}
+
+#terms {
+    font-size: 18px;
+    line-height: 28px;
 }
 
 #ar-button {
@@ -181,13 +231,22 @@ ul {
 }
 
 .section-contents {
-    width: 880px;
+    width: 940px;
     margin: 0 auto;
 }
 
-.charity {
+.section-wide {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.organization {
     margin-top: 120px;
     height: 90vh;
+}
+
+.organization h3 {
+    font-weight: 700;
 }
 
 .arrows {
@@ -220,6 +279,78 @@ ul {
     font-weight: 900;
 }
 
+.scroll {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll 32s linear infinite;
+}
+
+@keyframes scroll {
+  from { right: 0; }
+  to { right: -100%; }
+}
+
+.swish {
+    color: #95F33A;
+    font-size: 5vw;
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.cap {
+    color: #95F33A;
+    font-size: 5vw;
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/*
+
+.swish {
+    left: 0;
+    color: #95F33A;
+    width: 100%;
+    font-size: 5vw;
+    font-family: briller, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    overflow: hidden;
+    mix-blend-mode: difference;
+}
+
+@keyframes moveRight {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+.swish span {
+    animation: moveRight 50s linear infinite;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+    float: right;
+    width: 50%;
+}
+*/
 .hr {
     width: 100%;
     height: 2px;
@@ -253,8 +384,8 @@ ul {
 }
 
 #footer {
-    height: 250px;
-    padding-top: 158px;
+    height: 90vh;
+    padding: 158px 0 80px 0;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -298,4 +429,5 @@ ul {
     width: -webkit-calc(100% - 240px);
     width: calc(100% - 240px);
     height: 100%;
+    max-height: 180px;
 }
