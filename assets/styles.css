@@ -3,7 +3,7 @@ body {
     font-family: 'briller', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #fff;
     text-align: center;
 }
@@ -13,6 +13,7 @@ h1 {
     font-family: briller, sans-serif;
     font-style: normal;
     font-weight: 900;
+    margin: 10px 0 0;
 }
 
 h2 {
@@ -25,7 +26,10 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 43px;
+    font-family: 'briller', sans-serif;
+    font-style: normal;
+    font-weight: 900;
 }
 
 p {
@@ -38,8 +42,11 @@ p {
     ;
 }
 
-a {
+a,
+a:hover,
+a:visited {
     text-decoration: none;
+    color: #fff;
 }
 
 ul {
@@ -47,10 +54,10 @@ ul {
     padding-left: none;
 }
 
+.glow:hover {}
 
 #container {
     margin: 120px auto;
-    width: 1100px;
     background-color: #000;
 }
 
@@ -70,11 +77,17 @@ ul {
 #product {
     position: relative;
     height: 940px;
-    margin: 250px auto;
+    margin: 250px auto 0 auto;
 }
 
 #product div {
     position: absolute;
+}
+
+#pname {
+    font-family: 'briller', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 #sticker {
@@ -83,7 +96,7 @@ ul {
     height: 410px;
     width: 410px;
     top: -15px;
-    right: 15px;
+    right: 10%;
 }
 
 #sticker-gradient {
@@ -91,7 +104,7 @@ ul {
     height: 420px;
     width: 420px;
     top: -25px;
-    right: 20px;
+    right: 10%;
 }
 
 #concrete {
@@ -114,7 +127,7 @@ ul {
     border-radius: 42px;
     -moz-border-radius: 42px;
     -webkit-border-radius: 42px;
-    margin: 70px auto;
+    margin: 0px auto;
     font-family: ocr-a-std, monospace;
     font-style: normal;
     font-weight: 400;
@@ -123,8 +136,8 @@ ul {
 #donate-button {
     width: 830px;
     height: 90px;
-    background: #000;
-    border: 5px solid white;
+    background: radial-gradient(circle at left, #04FE01, #F8EF22);
+    border: 5px solid black;
     border-radius: 42px;
     -moz-border-radius: 42px;
     -webkit-border-radius: 42px;
@@ -132,27 +145,35 @@ ul {
 }
 
 #donate-button:hover {
-    background: #04FE01;
+    background: #000;
+    border: 5px solid white;
 }
 
 #button-contents {
+    height: 90px;
     line-height: 90px;
     text-align: center;
     color: #000;
+    text-transform: uppercase;
+    font-size: 27px;
 }
 
 #donate-button-contents {
     line-height: 90px;
     text-align: center;
-    font-family: ocr-a-std, monospace;
+    font-family: briller;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 27px;
-    color: #FFFFFF;
+    color: #000;
+}
+
+#donate-button-contents:hover {
+    color: #fff;
 }
 
 #ar {
-    height: 34px;
+    height: 64px;
     position: relative;
     margin-right: 10px;
     top: 10px;
@@ -164,18 +185,18 @@ ul {
     margin: 0 auto;
 }
 
+.charity {
+    margin-top: 120px;
+    height: 90vh;
+}
+
 .arrows {
     left: 0;
     color: #95F33A;
     width: 100%;
-    /* each letter will be 5% of the viewport width (vw) */
     font-size: 5vw;
     line-height: 1;
-    /* this will stop the long text from causing scroll bars by hanging
-  outside of the arrows box area */
     overflow: hidden;
-    /* our mix blend mode allows us to mix the current layer's style/colors with that
-   of what's behind it to create some really cool effects */
     mix-blend-mode: difference;
 }
 
@@ -190,17 +211,24 @@ ul {
 }
 
 .arrows span {
-    /* this is the shorthand (brief) version of the animation css rule */
     animation: moveLeft 400s infinite;
-    /* this will ensure the text stays all on the same line */
     white-space: nowrap;
-    /* our span is inline by default, so here we tell it to be block */
     display: block;
-    /* this will let us add our animation  */
     position: relative;
     font-family: briller, sans-serif;
     font-style: normal;
     font-weight: 900;
+}
+
+.hr {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+#power {
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 #power-caption {
